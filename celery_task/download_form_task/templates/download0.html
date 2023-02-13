@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Download Page</title>
+    </head>
+    <body>
+        <h1>Download Form</h1>
+        <form action="{% url 'handle_download_form_html' %}" method="post">
+            {% csrf_token %}
+            <select name="option">
+              <option value="aws">AWS</option>
+              <option value="gcp">GCP</option>
+              <option value="azure">AZURE</option>
+            </select>
+            <br>
+            <br>
+            <input type="text" name="url" placeholder="Enter URL">
+            <br>
+            <br>
+            <input type="submit" value="Submit">
+        </form>
+    </body>
+</html>
+  
